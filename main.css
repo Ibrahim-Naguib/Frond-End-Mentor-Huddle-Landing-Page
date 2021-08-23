@@ -1,0 +1,144 @@
+/* headings
+font-family: 'Poppins', sans-serif;
+body
+font-family: 'Open Sans', sans-serif;
+- Violet: hsl(257, 40%, 49%)
+- Soft Magenta: hsl(300, 69%, 71%) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(./images/bg-desktop.svg);
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(257, 40%, 49%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.logo {
+    margin: 50px;
+}
+.logo img {
+    width: 200px;
+}
+.container {
+    display: flex;
+    padding: 40px 60px 0 ;
+}
+@media (max-width: 375px) {
+    body {
+        background-image: url(./images/bg-mobile.svg);
+        background-repeat: no-repeat;
+    }
+    .logo {
+        margin: 40px;
+    }
+    .logo img{
+        width: 150px;
+    }
+    .container {
+        flex-direction: column;
+        padding: 0 30px;
+    }
+}
+.container .image {
+    flex-basis: 60%;
+}
+.container .image img {
+    max-width: 100%;
+}
+.container .text {
+    flex-basis: 40%;
+    padding-left: 10px;
+}
+@media (max-width: 375px) {
+    .container .text {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.container .text h1 {
+    padding: 50px 60px 0 0;
+    font-family: 'Poppins', sans-serif;
+}
+@media (max-width: 375px) {
+    .container .text h1 {
+        font-size: 25px;
+        text-align: center;
+        padding: 40px 0 10px;
+    }
+}
+.container .text p {
+    padding-right: 30px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+@media (max-width: 375px) {
+    .container .text p {
+        text-align: center;
+        padding: 10px 0 ;
+    }
+}
+.container .text button {
+    padding: 10px 50px;
+    border-radius: 45px;
+    border: none;
+    color: hsl(257, 40%, 49%);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 20px;
+}
+@media (max-width: 375px) {
+    .container .text button {
+        align-self: center;
+        padding: 10px 70px;
+    }
+}
+.container .text button:hover {
+    background-color: hsl(300, 69%, 71%);
+    cursor: pointer;
+    color: white;
+}
+.icons {
+    align-self: flex-end;
+    padding-right: 60px;
+    margin-right: 10px;
+}
+@media (max-width: 375px) {
+    .icons {
+        align-self: center;
+        margin: 40px 0;
+        padding-right: 0;
+    }
+    .icons a:last-of-type {
+        margin-right: 0;
+    }
+}
+.icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 10px;
+}
+.icons a:hover{
+    border-color: hsl(300, 69%, 71%);
+}
+.icons a:hover i{
+    color: hsl(300, 69%, 71%);
+}
+.icons a i {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
